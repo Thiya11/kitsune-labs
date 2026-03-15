@@ -1,4 +1,4 @@
-name: CI
+name: CI/CD
 
 on:
   push:
@@ -9,7 +9,6 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
       - uses: actions/checkout@v4
 
@@ -27,6 +26,7 @@ jobs:
 
       - name: Build
         run: npm run build
+
   deploy:
     needs: build                        # only deploy if build passes
     runs-on: ubuntu-latest
