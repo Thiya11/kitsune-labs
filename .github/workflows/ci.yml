@@ -28,9 +28,9 @@ jobs:
         run: npm run build
 
   deploy:
-    needs: build                        # only deploy if build passes
+    needs: build
     runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/main' # only deploy on main branch push
+    if: github.ref == 'refs/heads/main'
 
     steps:
       - name: Deploy to VPS
@@ -41,8 +41,9 @@ jobs:
           key: ${{ secrets.VPS_SSH_KEY }}
           port: ${{ secrets.VPS_PORT }}
           script: |
-            cd /your/project/path
+            cd ~/kitsune-labs
             git pull origin main
             npm install
             npm run build
-            pm2 restart kitsunechaos
+            sudo chmod -R 755 ~/kitsune-labs/dist
+            sudo systemctl reload nginx
