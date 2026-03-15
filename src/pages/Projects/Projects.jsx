@@ -1,6 +1,7 @@
 import { useState, useMemo } from 'react';
 import ProjectGrid from '../../components/Projects/ProjectGrid';
 import SearchBar from '../../components/UI/SearchBar';
+import useSEO from '../../hooks/useSEO';
 import projects from '../../data/projects.json';
 import './Projects.css';
 
@@ -8,6 +9,11 @@ const CATEGORIES = ['all', 'work', 'stem', 'business', 'education', 'extension',
 const STATUSES = ['all', 'live', 'wip', 'archived'];
 
 const Projects = () => {
+  useSEO({
+    title: 'Project Gallery',
+    description: 'Browse all projects from the kitsunechaos Lab — including STEM tools, business UIs, Chrome extensions, and creative experiments.'
+  });
+
   const [search, setSearch] = useState('');
   const [category, setCategory] = useState('all');
   const [status, setStatus] = useState('all');

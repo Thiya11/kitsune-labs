@@ -1,6 +1,7 @@
 import { useParams, Link, Navigate } from 'react-router-dom';
 import Tag from '../../components/UI/Tag';
 import Button from '../../components/UI/Button';
+import useSEO from '../../hooks/useSEO';
 import projects from '../../data/projects.json';
 import './ProjectDetail.css';
 
@@ -8,14 +9,22 @@ const ProjectDetail = () => {
   const { id } = useParams();
   const project = projects.find((p) => p.id === id);
 
+  useSEO({
+    title: project ? project.title : 'Project Details',
+    description: project ? project.description : 'Explore detailed information about this experiment from the kitsunechaos Lab.'
+  });
+
   if (!project) {
     return <Navigate to="/404" replace />;
   }
 
   const categoryIcons = {
-    tool: '🛠',
-    game: '🎮',
-    experiment: '🧪',
+    work: '💼',
+    stem: '🔬',
+    business: '📊',
+    education: '📚',
+    extension: '🧩',
+    portfolio: '👤',
   };
 
   const relatedProjects = projects

@@ -1,6 +1,13 @@
+import Button from '../../components/UI/Button';
+import useSEO from '../../hooks/useSEO';
 import './About.css';
 
 const About = () => {
+  useSEO({
+    title: 'About the Lab',
+    description: 'Learn about the kitsunechaos Lab, the mission behind the experiments, and the developer, Thiyagu Arunachalam.'
+  });
+
   const values = [
     {
       icon: '🧪',

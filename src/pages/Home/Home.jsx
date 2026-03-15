@@ -1,10 +1,16 @@
 import { Link } from 'react-router-dom';
 import ProjectCard from '../../components/Projects/ProjectCard';
 import Button from '../../components/UI/Button';
+import useSEO from '../../hooks/useSEO';
 import projects from '../../data/projects.json';
 import './Home.css';
 
 const Home = () => {
+  useSEO({
+    title: 'Creative Tools & Experiments',
+    description: 'Welcome to kitsunechaos — an indie developer\'s experimental playground for building creative tools, STEM simulators, and wild experiments.'
+  });
+
   const featuredProjects = projects.filter((p) => p.featured);
   const totalTags = [...new Set(projects.flatMap((p) => p.tags))].length;
   const liveCount = projects.filter((p) => p.status === 'live').length;
