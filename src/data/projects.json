@@ -1,0 +1,117 @@
+[
+  {
+    "id": "ysuvadu",
+    "title": "Ysuvadu",
+    "description": "A creative workspace for organizing your visual fragments, motifs, and ideas — structured the way your mind actually works.",
+    "longDescription": "Ysuvadu (Your Trace) is a professional creative workspace designed to bridge the gap between inspiration and organization. It allows creators to capture 'Fragments', organize them into branched 'Motifs' that mirror non-linear thinking, and track 'Momentum' through creative activity heatmaps.",
+    "thumbnail": "/projects/ysuvadu.svg",
+    "liveUrl": "https://ysuvadu.com",
+    "tags": [
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "Google Auth"
+    ],
+    "category": "work",
+    "status": "live",
+    "date": "2026-03-10",
+    "featured": true
+  },
+  {
+    "id": "kitsunetools",
+    "title": "Kitsune Tools",
+    "description": "A comprehensive suite of interactive tools designed to simplify Science, Technology, Engineering, and Math operations.",
+    "longDescription": "Kitsune Tools is a versatile digital workshop aimed at empowering students and professionals with high-precision STEM utilities. The platform currently hosts two primary features: an Advanced Ohm's Law Calculator for electronic component diagnostics and an Experimental Simple Pendulum Simulator for analyzing harmonic motion with custom planetary gravity settings.",
+    "thumbnail": "/projects/kitsunetools.svg",
+    "liveUrl": "https://kitsune-tools.vercel.app/overview",
+    "sourceUrl": "https://github.com/Thiya11/kitsune-tools",
+    "tags": [
+      "Angular",
+      "TypeScript",
+      "Bootstrap",
+      "STEM"
+    ],
+    "category": "stem",
+    "status": "live",
+    "date": "2025-01-15",
+    "featured": true
+  },
+  {
+    "id": "billingappui",
+    "title": "Billing App UI",
+    "description": "A comprehensive billing and inventory management interface for grocery shops and retail businesses.",
+    "longDescription": "A robust billing and inventory management application tailored for grocery shops and retail businesses. Built with Angular 16, it features a modular architecture with support for inventory tracking, category-based filtering, and transaction management. The UI is powered by Bootstrap 5 and includes advanced data visualization through ECharts.",
+    "thumbnail": "/projects/billingappui.svg",
+    "liveUrl": "https://billing-app-ui.vercel.app",
+    "sourceUrl": "https://github.com/Thiya11/billingAppUI",
+    "tags": [
+      "Angular",
+      "TypeScript",
+      "SCSS",
+      "Bootstrap",
+      "ECharts"
+    ],
+    "category": "business",
+    "status": "live",
+    "date": "2025-04-15",
+    "featured": true
+  },
+  {
+    "id": "japanese-learning",
+    "title": "Japanese Learning App",
+    "description": "An interactive platform for mastering JLPT N3/N4 vocabulary and Business Kanji.",
+    "longDescription": "A comprehensive Japanese language learning platform designed for JLPT N3/N4 preparation and Business Kanji mastery. It features multiple study modes including an interactive Word Board for flashcard-style learning, a detailed List View for quick reference, and a progress Tracker to monitor study goals.",
+    "thumbnail": "/projects/japanese-learning.svg",
+    "liveUrl": "https://japanese-learning-tau.vercel.app/",
+    "sourceUrl": "https://github.com/Thiya11/japanese-learning",
+    "tags": [
+      "Angular",
+      "TypeScript",
+      "SCSS",
+      "Bootstrap"
+    ],
+    "category": "education",
+    "status": "live",
+    "date": "2025-08-15",
+    "featured": true
+  },
+  {
+    "id": "prompt-checker",
+    "title": "ChatGPT Prompt Checker",
+    "description": "A Chrome extension designed to ensure your ChatGPT conversations stay focused on a specific topic using AI-powered prompt verification.",
+    "longDescription": "This extension brings focus to your AI interactions by enforcing topic-specific constraints. It features context enforcement, AI verification via a backend worker, and smart interception of off-topic prompts with optional session bypass.",
+    "thumbnail": "/projects/prompt-checker.svg",
+    "liveUrl": "https://chromewebstore.google.com/detail/chatgpt-prompt-checker-co/hkdpeladbholeecafipfjofffgjbilkp",
+    "sourceUrl": "https://github.com/Thiya11/chatgpt-prompt-checker",
+    "tags": [
+      "JavaScript",
+      "Chrome Extension",
+      "AI",
+      "Focus"
+    ],
+    "category": "extension",
+    "status": "live",
+    "date": "2026-03-15",
+    "featured": true
+  },
+  {
+    "id": "portfolio",
+    "title": "Personal Portfolio",
+    "description": "A modern, interactive developer portfolio featuring AI-enhanced greetings, multilingual support, and a comprehensive project showcase.",
+    "longDescription": "This AI-enhanced personal portfolio serves as a comprehensive professional hub. Built with a modular architecture, it chronicles a 3+ year journey across international borders (India to Japan). Featuring a multilingual interface (English/Japanese), a detailed skills matrix, and a curated project gallery.",
+    "thumbnail": "/projects/portfolio.svg",
+    "liveUrl": "https://thiyagu-arunachalam.vercel.app/",
+    "sourceUrl": "https://github.com/Thiya11/new-portfolio",
+    "tags": [
+      "React",
+      "Vite",
+      "Bootstrap",
+      "i18n",
+      "CSS3"
+    ],
+    "category": "portfolio",
+    "status": "live",
+    "date": "2026-03-15",
+    "featured": true
+  }
+]
