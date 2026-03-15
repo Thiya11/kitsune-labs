@@ -5,7 +5,7 @@
     "description": "A creative workspace for organizing your visual fragments, motifs, and ideas — structured the way your mind actually works.",
     "longDescription": "Ysuvadu (Your Trace) is a professional creative workspace designed to bridge the gap between inspiration and organization. It allows creators to capture 'Fragments', organize them into branched 'Motifs' that mirror non-linear thinking, and track 'Momentum' through creative activity heatmaps.",
     "thumbnail": "/projects/ysuvadu.svg",
-    "liveUrl": "https://ysuvadu.com",
+    "liveUrl": "https://suvadu.vercel.app",
     "tags": [
       "Next.js",
       "TypeScript",
