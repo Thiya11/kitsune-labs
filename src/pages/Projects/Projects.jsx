@@ -27,7 +27,6 @@ const Projects = () => {
     });
   }, [search, category, status]);
 
-  const allTags = [...new Set(projects.flatMap((p) => p.tags))];
 
   const getCategoryIcon = (cat) => {
     switch (cat) {
