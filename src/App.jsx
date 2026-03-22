@@ -8,6 +8,9 @@ const Projects = lazy(() => import('./pages/Projects/Projects'));
 const ProjectDetail = lazy(() => import('./pages/ProjectDetail/ProjectDetail'));
 const About = lazy(() => import('./pages/About/About'));
 const GrantProposalAI = lazy(() => import('./pages/GrantProposalAI/GrantProposalAI'));
+const Support = lazy(() => import('./pages/Support/Support'));
+const Terms = lazy(() => import('./pages/Legal/Terms'));
+const Cancellation = lazy(() => import('./pages/Legal/Cancellation'));
 const NotFound = lazy(() => import('./pages/NotFound/NotFound'));
 
 // Simple loading fallback
@@ -28,6 +31,9 @@ function App() {
             <Route path="projects/:id" element={<ProjectDetail />} />
             <Route path="about" element={<About />} />
             <Route path="grant-proposal-ai" element={<GrantProposalAI />} />
+            <Route path="support" element={<Support />} />
+            <Route path="terms" element={<Terms />} />
+            <Route path="cancellation" element={<Cancellation />} />
             <Route path="*" element={<NotFound />} />
           </Route>
         </Routes>

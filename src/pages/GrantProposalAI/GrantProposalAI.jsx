@@ -21,7 +21,7 @@ const GrantProposalAI = () => {
         '5 reports included',
         'Works inside Google Docs',
         'Works for 1 month',
-        'Basic support'
+        'support'
       ],
       buttonText: 'Get Started Free',
       variant: 'secondary',
@@ -67,8 +67,8 @@ const GrantProposalAI = () => {
           Write Grant Proposals in <span className="gradient-text">20 Seconds</span>
         </h1>
         <p className="gai-hero__subtitle">
-          AI-powered grant writer built inside Google Docs. 
-          Stop spending days on proposals — generate a 
+          AI-powered grant writer built inside Google Docs.
+          Stop spending days on proposals — generate a
           full draft instantly.
         </p>
         <div className="gai-hero__actions">
@@ -79,7 +79,7 @@ const GrantProposalAI = () => {
             View Plans
           </Button>
         </div>
-        
+
         <div className="gai-hero__demo glass">
           <img src="/brand/grant_writer_demo.png" alt="AI Grant Writer Dashboard" />
         </div>
@@ -123,14 +123,14 @@ const GrantProposalAI = () => {
         <div className="container">
           <h2 className="gai-pricing__title">Simple Pricing for Every Team</h2>
           <p className="gai-pricing__subtitle">Start for free or upgrade for unlimited power</p>
-          
+
           <div className="gai-pricing__grid stagger-children">
             {plans.map((plan, i) => (
               <div key={i} className={`gai-pricing__card glass animate-fade-in-up ${plan.variant === 'primary' ? 'gai-pricing__card--featured' : ''}`}>
                 <div className="gai-pricing__plan-name">{plan.name}</div>
                 <div className="gai-pricing__price">{plan.price}</div>
                 <span className="gai-pricing__period">{plan.period}</span>
-                
+
                 <div className="gai-pricing__features">
                   {plan.features.map((f, j) => (
                     <div key={j} className="gai-pricing__feature">
@@ -139,7 +139,7 @@ const GrantProposalAI = () => {
                     </div>
                   ))}
                 </div>
-                
+
                 <Button href={plan.link} external size="lg" variant={plan.variant} style={{ width: '100%' }}>
                   {plan.buttonText}
                 </Button>
@@ -151,9 +151,9 @@ const GrantProposalAI = () => {
 
       {/* Final CTA */}
       <section className="container" style={{ padding: 'var(--space-4xl) 0', textAlign: 'center' }}>
-         <Button href={stripeUrl} external size="lg" icon="🚀" variant="primary">
-            Get Started with Pro — $49/month
-          </Button>
+        <Button href={stripeUrl} external size="lg" icon="🚀" variant="primary">
+          Get Started with Pro — $49/month
+        </Button>
       </section>
     </div>
   );

@@ -2,41 +2,48 @@ name: CI/CD
 
 on:
   push:
-    branches: [ main, master ]
-  pull_request:
-    branches: [ main, master ]
+    branches: [ main ]
 
 env:
-  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true   # ← fixes deprecation warning
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
 jobs:
-  build:
+  build-and-deploy:
     runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
 
-      - name: Set up Node.js
+    steps:
+      # 1. Checkout code
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # 2. Setup Node
+      - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '22'
           cache: 'npm'
 
+      # 3. Install deps
       - name: Install dependencies
-        run: npm install
+        run: npm ci
 
-      - name: Lint
-        run: npm run lint || echo "Linting failed, but continuing build..."
-
+      # 4. Build project
       - name: Build
         run: npm run build
 
-  deploy:
-    needs: build
-    runs-on: ubuntu-latest
-    if: github.ref == 'refs/heads/main'
+      # 5. Upload dist to VPS (temporary)
+      - name: Upload dist
+        uses: appleboy/scp-action@v0.1.7
+        with:
+          host: ${{ secrets.VPS_HOST }}
+          username: ${{ secrets.VPS_USER }}
+          key: ${{ secrets.VPS_SSH_KEY }}
+          port: ${{ secrets.VPS_PORT }}
+          source: "dist/*"
+          target: "/home/thiyagu/kitsune-labs-temp"
 
-    steps:
-      - name: Deploy to VPS
+      # 6. Move to production (atomic deploy)
+      - name: Deploy on VPS
         uses: appleboy/ssh-action@v1.0.3
         with:
           host: ${{ secrets.VPS_HOST }}
@@ -44,9 +51,14 @@ jobs:
           key: ${{ secrets.VPS_SSH_KEY }}
           port: ${{ secrets.VPS_PORT }}
           script: |
-            cd /home/thiyagu/kitsune-labs
-            git pull origin main
-            npm install
-            npm run build
-            sudo chmod -R 755 /home/thiyagu/kitsune-labs/dist
+            # Remove old dist
+            rm -rf /home/thiyagu/kitsune-labs/dist
+
+            # Move new build
+            mv /home/thiyagu/kitsune-labs-temp/dist /home/thiyagu/kitsune-labs/
+
+            # Cleanup temp
+            rm -rf /home/thiyagu/kitsune-labs-temp
+
+            # Reload nginx
             sudo systemctl reload nginx

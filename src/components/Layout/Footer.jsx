@@ -29,6 +29,12 @@ const Footer = () => {
               <Link to="/about" className="footer__nav-link">About</Link>
             </div>
             <div className="footer__nav-group">
+              <h4 className="footer__nav-title">Support</h4>
+              <Link to="/support" className="footer__nav-link">Support</Link>
+              <Link to="/terms" className="footer__nav-link">Terms</Link>
+              <Link to="/cancellation" className="footer__nav-link">Cancellation</Link>
+            </div>
+            <div className="footer__nav-group">
               <h4 className="footer__nav-title">Connect</h4>
               <a href="https://github.com/Thiya11" target="_blank" rel="noopener noreferrer" className="footer__nav-link">GitHub</a>
               <a href="https://www.linkedin.com/in/thiyagu-arunachalam-b6a901159/" target="_blank" rel="noopener noreferrer" className="footer__nav-link">LinkedIn</a>
