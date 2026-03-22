@@ -22,6 +22,7 @@ const Navbar = () => {
     { to: '/', label: 'Home' },
     { to: '/projects', label: 'Projects' },
     { to: '/about', label: 'About' },
+    { to: '/grant-proposal-ai', label: 'Grant AI' },
   ];
 
   const { theme, toggleTheme } = useTheme();
