@@ -32,6 +32,7 @@ const Footer = () => {
               <h4 className="footer__nav-title">Support</h4>
               <Link to="/support" className="footer__nav-link">Support</Link>
               <Link to="/terms" className="footer__nav-link">Terms</Link>
+              <Link to="/privacy" className="footer__nav-link">Privacy</Link>
               <Link to="/cancellation" className="footer__nav-link">Cancellation</Link>
             </div>
             <div className="footer__nav-group">

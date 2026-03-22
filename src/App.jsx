@@ -10,6 +10,7 @@ const About = lazy(() => import('./pages/About/About'));
 const GrantProposalAI = lazy(() => import('./pages/GrantProposalAI/GrantProposalAI'));
 const Support = lazy(() => import('./pages/Support/Support'));
 const Terms = lazy(() => import('./pages/Legal/Terms'));
+const Privacy = lazy(() => import('./pages/Legal/Privacy'));
 const Cancellation = lazy(() => import('./pages/Legal/Cancellation'));
 const NotFound = lazy(() => import('./pages/NotFound/NotFound'));
 
@@ -33,6 +34,7 @@ function App() {
             <Route path="grant-proposal-ai" element={<GrantProposalAI />} />
             <Route path="support" element={<Support />} />
             <Route path="terms" element={<Terms />} />
+            <Route path="privacy" element={<Privacy />} />
             <Route path="cancellation" element={<Cancellation />} />
             <Route path="*" element={<NotFound />} />
           </Route>
